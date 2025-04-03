@@ -67,9 +67,9 @@ X, y, tokenizer, vocab_size = tokenize_text(text_data, seq_length)
 
 
 model = build_model(seq_length, vocab_size)
-model.fit(X, y, epochs=50, batch_size=64, verbose=1)
+model.fit(X, y, epochs=50, batch_size=100, verbose=1)
 
 
-seed_text = "what is this text about"
-generated_text = generate_text(model, tokenizer, seed_text, seq_length, 50)
+seed_text = "Shall I compare thee"
+generated_text = generate_text(model, tokenizer, seed_text, seq_length, 2)
 print("Generated Text:", generated_text)
